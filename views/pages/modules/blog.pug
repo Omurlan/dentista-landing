@@ -1,0 +1,39 @@
+block pageVariables
+    -
+        const blogs = [
+            { image: "./images/blog-1.webp", delay: 0.1,  title: "Scary Thing That You Don’t Get Enough Sleep", desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", auth: "Admin" },
+            { image: "./images/blog-2.webp", delay: 0.15, title: "Scary Thing That You Don’t Get Enough Sleep", desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", auth: "Admin" },
+            { image: "./images/blog-3.webp", delay: 0.2, title: "Scary Thing That You Don’t Get Enough Sleep", desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", auth: "Admin" },
+        ]
+  
+section.blog
+    div.container
+        div.blog-content
+            div.blog__introduction.wow.fadeInUp
+                h1.heading Blog 
+                h3.subheading Recent Blog
+                p Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
+            div.blog__list
+                each item in blogs 
+                    div.blog__list-item.wow.fadeInUp(data-wow-delay=item.delay + "s")
+                        div(style='background-image:url('+ item.image +')').blog__image 
+                            span.image__date-block
+                                span.date-block__day 18
+                                span.date-block__month September 
+                                span.date-block__year 2019
+                        div.blog__description
+                            h1 #{item.title}
+                            p #{item.desc}
+                            div.list-item__details
+                                button Read More →
+                                div(style="display: flex; gap: 15px;")
+                                    a  
+                                        span #{item.auth}
+                                    a.details__review-count 
+                                        img(src="./images/comment-gray.png")
+                                        span 3
+                                    
+                                  
+                            
+
+

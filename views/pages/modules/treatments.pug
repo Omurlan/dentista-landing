@@ -1,0 +1,25 @@
+block pageVariables
+    -
+        const treatments = [
+            { image: "./images/treatment-1.webp", title: "Dental Implants", desc: "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic." },
+            { image: "./images/treatment-2.webp", title: "Cosmetic Dentistry", desc: "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic." },
+            { image: "./images/treatment-3.webp", title: "Dental Care", desc: "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic." },
+            { image: "./images/treatment-4.webp", title: "Teeth Whitening", desc: "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic." },
+            { image: "./images/treatment-5.webp", title: "Dental Calculus", desc: "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic." },
+            { image: "./images/treatment-6.webp", title: "Periondontics", desc: "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic." },
+            { image: "./images/treatment-7.webp", title: "Clip & Braces", desc: "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic." },
+            { image: "./images/treatment-8.webp", title: "Root Canel", desc: "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic." }
+        ]
+
+div.treatments
+    div.container 
+        div.treatments-content
+            ul.treatments__list
+                each item in treatments
+                    li.list__item.wow.fadeInUp
+                        div(style='background-image: url('+ item.image +')').item__treatment-image
+                        h3 #{item.title}
+                        p #{item.desc}
+                        
+
+

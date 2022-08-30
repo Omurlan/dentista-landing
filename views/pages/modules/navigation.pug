@@ -1,0 +1,25 @@
+block pageVariables   
+    -
+        const navigation = [
+                { title: "Home", link: "" },
+                { title: "About", link: "about" },
+                { title: "Doctor", link: "doctor" },
+                { title: "Treatments", link: "treatments" },
+                { title: "Pricing", link: "pricing" },
+                { title: "Blog", link: "blog" },
+                { title: "Contact", link: "contact" }
+            ]
+
+div.navigation
+    div.mobile-menu-block
+        div.mobile-menu__burger-block#mobile-menu__burger
+            span
+            h4 Menu
+    ul.navigation__list#mobile-navigation
+        each item in navigation 
+            if currentPage === item.title 
+                li.list__item.current
+                    a(href=`./${item.link}`) #{item.title} 
+            else 
+                li.list__item 
+                    a(href=`./${item.link}`) #{item.title} 

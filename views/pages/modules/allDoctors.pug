@@ -1,0 +1,23 @@
+block pageVariables 
+    -
+        const doctors = [
+            { image: "./images/doctor-1.webp", delay: 0.1, name: "Dr. Lloyd Wilson", title: "Dentist", desc: "I am an ambitious workaholic, but apart from that, pretty simple person." },
+            { image: "./images/doctor-2.webp", delay: 0.15, name: "Dr. Rachel Parker", title: "Dentist", desc: "I am an ambitious workaholic, but apart from that, pretty simple person." },
+            { image: "./images/doctor-3.webp", delay: 0.2, name: "Dr. Ian Smith", title: "Dentist", desc: "I am an ambitious workaholic, but apart from that, pretty simple person." },
+            { image: "./images/doctor-4.webp", delay: 0.25, name: "Dr. Alicia Henderson", title: "Dentist", desc: "I am an ambitious workaholic, but apart from that, pretty simple person." },
+            { image: "./images/doctor-5.webp", delay: 0.1, name: "Dr. Lloyd Wilson", title: "Dentist", desc: "I am an ambitious workaholic, but apart from that, pretty simple person." },
+            { image: "./images/doctor-6.webp", delay: 0.15, name: "Dr. Rachel Parker", title: "Dentist", desc: "I am an ambitious workaholic, but apart from that, pretty simple person." },
+            { image: "./images/doctor-7.webp", delay: 0.2, name: "Dr. Ian Smith", title: "Dentist", desc: "I am an ambitious workaholic, but apart from that, pretty simple person." },
+            { image: "./images/doctor-8.webp", delay: 0.25, name: "Dr. Alicia Henderson", title: "Dentist", desc: "I am an ambitious workaholic, but apart from that, pretty simple person." }
+        ]
+section.doctors 
+    div.container
+        div.doctors-content
+            ul.doctors__list 
+                each item, index in doctors 
+                    li.doctors__list-item.wow.fadeInUp(data-wow-delay=item.delay + "s")
+                        div(style='background-image: url('+ item.image +')').list-item__image
+                        h3 #{item.name}
+                        h5 #{item.title}
+                        p #{item.desc}
+            

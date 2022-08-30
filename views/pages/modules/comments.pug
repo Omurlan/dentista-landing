@@ -1,0 +1,59 @@
+div.comments
+    h3 6 Comments 
+
+    ul.comment-list
+        each comment in comments
+                if !comment.parentId
+                    //- main
+                    li.comment-list__item
+                        div.comment-content
+                            img(src="./images/review-3.webp")
+                            div 
+                                h3 #{comment.author}
+                                div #{comment.date}
+                                p #{comment.text}
+                                button Reply
+                        if comment.children
+                            ul
+                                each subComment in comments 
+                                    if subComment.parentId === comment.id
+                                        //- subcomment
+                                        li.comment-list__item 
+                                            div.comment-content
+                                                img(src="./images/review-3.webp")
+                                                div 
+                                                    h3 #{subComment.author}
+                                                    div #{subComment.date}
+                                                    p #{subComment.text}
+                                                    button Reply
+                                            if subComment.children
+                                                ul 
+                                                    each secondLevel in comments 
+                                                        if secondLevel.parentId === subComment.id
+                                                            //- secondLevel
+                                                            li.comment-list__item 
+                                                                div.comment-content
+                                                                    img(src="./images/review-3.webp")
+                                                                    div 
+                                                                        h3 #{secondLevel.author}
+                                                                        div #{secondLevel.date}
+                                                                        p #{secondLevel.text}
+                                                                        button Reply
+                                                                if secondLevel.children
+                                                                    ul 
+                                                                        each thirdLevel in comments 
+                                                                            if thirdLevel.parentId === secondLevel.id
+                                                                                //- thirdLevel
+                                                                                li.comment-list__item 
+                                                                                    div.comment-content
+                                                                                        img(src="./images/review-3.webp")
+                                                                                        div 
+                                                                                            h3 #{thirdLevel.author}
+                                                                                            div #{thirdLevel.date}
+                                                                                            p #{thirdLevel.text}
+    include ./commentForm.pug        
+                                                                                
+            
+
+
+    

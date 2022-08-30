@@ -1,0 +1,71 @@
+block singleBlogVariables
+    -
+        const categories = [
+            { title: "Neurology", count: 6 },
+            { title: "Cardiology", count: 8 },
+            { title: "Surgery", count: 2 },
+            { title: "Dental", count: 2 },
+            { title: "Ophtalmology", count: 2 }
+        ]
+    -
+        const tags = ["Medical", "Hospital", "Nurse", "Doctor", "Medicine", "Facilities", "Staff"]
+    -
+        const archives = [
+            { title: "December 2021", count: 30 },
+            { title: "November 2021", count: 20 },
+            { title: "September 2021", count: 6 },
+            { title: "August 2021", count: 8 }
+        ]
+    -
+        const articles = [
+            { image: "./images/blog-1.webp", title: "Even the all-powerful Pointing has no control about", date: "Sept. 20, 2019", author: "Omurlan", comments: "15" },
+            { image: "./images/blog-2.webp", title: "Even the all-powerful Pointing has no control about", date: "Sept. 20, 2019", author: "Omurlan", comments: "20" },
+            { image: "./images/blog-3.webp", title: "Even the all-powerful Pointing has no control about", date: "Sept. 20, 2019", author: "Omurlan", comments: "20" }
+        ]
+
+div.sidebar 
+    div.sidebar__search-blog 
+        input(placeholder="Type a keyword and hit enter")
+        img(src="./images/search.png")
+    div.sidebar__category
+        h4 Category
+        ul 
+            each category in categories
+                li 
+                    a #{category.title}
+                    span #{"(" + category.count + ")"}
+    div.sidebar__popular 
+        h4 Popular Articles
+        div.sidebar__articles-list
+            each item in articles
+                div.articles-list__item
+                    div(style="width: 80px;")
+                        div(style='background-image: url('+ item.image +')').recent-blog__image
+                    div.articles-list__item__details
+                        h5 #{item.title}
+                        div.articles-list__item__info
+                            a 
+                                img(src="./images/calendar-gray.png")
+                                |#{item.date}
+                            a 
+                                img(src="./images/user-gray.png")
+                                |#{item.author}
+                            a 
+                                img(src="./images/comment-gray.png")
+                                |#{item.comments}
+    div.sidebar__tags
+        h4 Tag Cloud
+        ul.chip-list
+            each tag in tags 
+                li.chip #{tag}
+    div.sidebar__archives 
+        h4 Archives
+        ul 
+            each archive in archives 
+                li 
+                    a #{archive.title}
+                    span #{"(" + archive.count + ")"}
+
+    div.sidebar__paragraph
+        h4 Paragraph 
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!

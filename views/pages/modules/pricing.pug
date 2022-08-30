@@ -1,0 +1,28 @@
+block pageVariables 
+    -
+        const prices = [
+            { type: "Basic", price: "24.50", delay: 0.1, services: ["Diagnostic Services", "Professional Consultation", "Tooth Implants", "Surgical Extractions", "Teeth Whitening"] },
+            { type: "Standart", price: "34.50", delay: 0.15, services: ["Diagnostic Services", "Professional Consultation", "Tooth Implants", "Surgical Extractions", "Teeth Whitening"] },
+            { type: "Premium", price: "54.50", delay: 0.2, services: ["Diagnostic Services", "Professional Consultation", "Tooth Implants", "Surgical Extractions", "Teeth Whitening"] },
+            { type: "Platinum", price: "24.50", delay: 0.25, services: ["Diagnostic Services", "Professional Consultation", "Tooth Implants", "Surgical Extractions", "Teeth Whitening"] },
+        ]
+
+section.pricing
+    div.container
+        div.pricing-content
+            div.pricing__introduction.wow.fadeInUp
+                h1.heading Pricing 
+                h3.subheading Our Pricing 
+                p Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
+            div.pricing__list
+                each item in prices 
+                    div.pricing__list-item.wow.fadeInUp(data-wow-delay=item.delay + "s")
+                        h2 #{item.type}
+                        h4 
+                            span $#{item.price} 
+                            |/ session
+                        ul.pricing__services-list
+                            each serv in item.services
+                                li.services-list__item #{serv}
+                            button.pricing__button Get Offer
+

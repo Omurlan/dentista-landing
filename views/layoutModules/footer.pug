@@ -1,0 +1,79 @@
+block variables
+    -
+        const links = ["Home", "About", "Services", "Departments", "Contact"]
+    -
+        const services = ["Neurology", "Dentist", "Ophtalmology", "Cardiology", "Surgery"]
+
+    -
+        const recentBlogs = [
+            { image: "./images/blog-1.webp", title: "Even the all-powerful Pointing has no control about", date: "Sept. 20, 2019", author: "Admin", comments: "19" },
+            { image: "./images/blog-2.webp", title: "Even the all-powerful Pointing has no control about", date: "Sept. 20, 2019", author: "Admin", comments: "19" }
+        ]
+    -
+        const socials = ["./images/twitter.png", "./images/facebook.png", "./images/instagram.png"]
+
+footer.footer 
+    div.container 
+        div.footer-content
+            div.footer__first-section
+                div.first-section__text.footer-section
+                    div
+                        h2 Dentista 
+                        p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                div.first-section__questions
+                    h2 Have a questions ?
+                    ul.footer__address-block
+                        li.address 
+                            img(src="./images/gps.png")
+                            |203 Fake St. Mountain View, San Francisco, California, USA
+                        li.phone 
+                            img(src="./images/phone.png")
+                            |+2 392 3929 210
+                        li.email 
+                            img(src="./images/email.png")
+                            |info@yourdomain.com
+                ul.first-section__socials
+                        each item in socials 
+                            li.socials__item.wow.fadeInUp
+                                a
+                                    span(style='background-image: url('+ item +')')
+            div.footer__second-section.footer-section
+                div
+                    h2 Links
+                    ul
+                        each item in links
+                            li → #{item}
+                div
+                    h2 Services
+                    ul 
+                        each item in services 
+                            li → #{item}
+            div.footer__third-section.footer-section   
+                h2 Recent Blog
+                div.footer__recent-blog
+                    each item in recentBlogs
+                        div.recent-blog__item
+                            div(style="width: 80px;")
+                                div(style='background-image: url('+ item.image +')').recent-blog__image
+                            div.recent-blog__details
+                                h3 #{item.title}
+                                div.recent-blog__info
+                                    a 
+                                        img(src="./images/calendar.png")
+                                        |#{item.date}
+                                    a 
+                                        img(src="./images/user.png")
+                                        |#{item.author}
+                                    a 
+                                        img(src="./images/comment.png")
+                                        |#{item.comments}
+            div.footer__forth-section.footer-section
+                h2 Opening Hours 
+                p 
+                    span(style="background-image: url(./images/clock.png)")
+                    |We are open 24/7
+                div.forth-section__form
+                    h2 Subscribe Us !
+                    input(placeholder="Enter email address" type="email").form__email
+                    button.form__button Subscribe
+        span.copyright Copyright ©2022 All rights reserved | Учебный проект для верстки

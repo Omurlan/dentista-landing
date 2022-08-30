@@ -1,0 +1,13 @@
+div.breadcrumbs
+    div(data-stellar-background-ratio="0.2").breadcrumbs__with-image
+        div.container
+            div.breadcrumbs-content
+                    h1.wow.fadeInUp #{crumbTitle}
+                    ul 
+                        each crumb, index in crumbs
+                            if index === 0
+                                li
+                                    a(href="/") #{crumb + " >"}
+                            else 
+                               li
+                                    a(href=crumb) #{crumb + " >"} 

@@ -1,0 +1,27 @@
+block pageVariables 
+    -
+        const reviews = [
+            { image: "./images/review-1.webp", name: "Rodel Golez", position: "Farmer", review: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts." },
+            { image: "./images/review-2.webp", name: "Mark Huff", position: "Manager", review: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts." },
+            { image: "./images/review-3.webp", name: "Racky Henderson", position: "Business", review: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts." },
+            { image: "./images/review-4.webp", name: "Ken Bosh", position: "Business", review: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts." },
+        ]
+
+section.reviews 
+    div.container
+        div.reviews-content
+            div.reviews__introduction
+                h1.heading TESTIMONIALS
+                h3.subheading Our Patients Says About Us
+            ul.owl-carousel.owl-theme.owl-reviews.reviews__list
+                each item in reviews 
+                    li.review-item
+                        div.review-top
+                            div.review-image
+                                img(src=item.image)
+                            div.review-sub
+                                p 
+                                    img(src="./images/quote.png").review-sub__qoute
+                                    |#{item.review}
+                                h5 #{item.name}
+                                h6 #{item.position}
