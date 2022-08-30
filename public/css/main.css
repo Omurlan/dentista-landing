@@ -227,6 +227,7 @@ a {
 .contact__form {
   display: flex;
   gap: 20px;
+  width: 100%;
   grid-area: form;
   background: var(--gray-bg);
   padding: 30px;
@@ -1323,6 +1324,7 @@ input[type='time'] {
 .comment-form {
   display: flex;
   gap: 20px;
+  width: 100%;
   grid-area: form;
   background: var(--gray-bg);
   padding: 30px;
