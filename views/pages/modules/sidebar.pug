@@ -36,14 +36,14 @@ div.sidebar
                     span #{"(" + category.count + ")"}
     div.sidebar__popular 
         h4 Popular Articles
-        div.sidebar__articles-list
+        div.article-list
             each item in articles
-                div.articles-list__item
+                div.article-list__item
                     div(style="width: 80px;")
-                        div(style='background-image: url('+ item.image +')').recent-blog__image
-                    div.articles-list__item__details
+                        div(style='background-image: url('+ item.image +')').recent-blog-list__image
+                    div.article-list__details
                         h5 #{item.title}
-                        div.articles-list__item__info
+                        div.article-list__info
                             a 
                                 img(src="./images/calendar-gray.png")
                                 |#{item.date}

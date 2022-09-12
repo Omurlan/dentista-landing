@@ -13,11 +13,11 @@ block pageVariables
 section.doctors 
     div.container
         div.doctors-content
-            ul.doctors__list 
+            ul.doctor-list 
                 each item, index in doctors 
-                    li.doctors__list-item.wow.fadeInUp(data-wow-delay=item.delay + "s")
-                        div(style='background-image: url('+ item.image +')').list-item__image
-                        h3 #{item.name}
-                        h5 #{item.title}
-                        p #{item.desc}
+                    li.doctor-list__item.wow.fadeInUp(data-wow-delay=item.delay + "s")
+                        div(style='background-image: url('+ item.image +')').doctor-list__image
+                        h3.doctor-list__name #{item.name}
+                        h5.doctor-list__title #{item.title}
+                        p.doctor-list__description #{item.desc}
             

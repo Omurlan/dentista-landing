@@ -12,24 +12,24 @@ block pageVariables
 section.blog
     div.container
         div.blog-content
-            div.blog__list
+            div.blog-list
                 each item in blogs 
-                        div.blog__list-item.wow.fadeInUp(data-wow-delay=item.delay + "s")
+                        div.blog-list__item.wow.fadeInUp(data-wow-delay=item.delay + "s")
                             a(href="/single-blog")
-                                div(style='background-image:url('+ item.image +')').blog__image 
+                                div(style='background-image:url('+ item.image +')').blog-list__image 
                                     span.image__date-block
                                         span.date-block__day 18
                                         span.date-block__month September 
                                         span.date-block__year 2019
-                                div.blog__description
-                                    h1 #{item.title}
-                                    p #{item.desc}
-                                    div.list-item__details
-                                        button Read More →
+                                div.blog-list__text
+                                    h1.blog-list__title #{item.title}
+                                    p.blog-list__description #{item.desc}
+                                    div.blog-list__details
+                                        button.button.blog-list__button Read More →
                                         div(style="display: flex; gap: 15px;")
-                                            a  
+                                            a.blog-list__author  
                                                 span #{item.auth}
-                                            a.details__review-count 
+                                            a.blog-list__review-count 
                                                 img(src="./images/comment-gray.png")
                                                 span 3
                                     

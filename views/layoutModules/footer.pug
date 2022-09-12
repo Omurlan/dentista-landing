@@ -16,11 +16,11 @@ footer.footer
     div.container 
         div.footer-content
             div.footer__first-section
-                div.first-section__text.footer-section
+                div.footer__text.footer-section
                     div
                         h2 Dentista 
                         p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-                div.first-section__questions
+                div.footer__questions
                     h2 Have a questions ?
                     ul.footer__address-block
                         li.address 
@@ -32,9 +32,9 @@ footer.footer
                         li.email 
                             img(src="./images/email.png")
                             |info@yourdomain.com
-                ul.first-section__socials
+                ul.socials-list
                         each item in socials 
-                            li.socials__item.wow.fadeInUp
+                            li.socials-list__item.wow.fadeInUp
                                 a
                                     span(style='background-image: url('+ item +')')
             div.footer__second-section.footer-section
@@ -50,14 +50,14 @@ footer.footer
                             li → #{item}
             div.footer__third-section.footer-section   
                 h2 Recent Blog
-                div.footer__recent-blog
+                div.recent-blog-list
                     each item in recentBlogs
-                        div.recent-blog__item
+                        div.recent-blog-list__item
                             div(style="width: 80px;")
-                                div(style='background-image: url('+ item.image +')').recent-blog__image
-                            div.recent-blog__details
+                                div(style='background-image: url('+ item.image +')').recent-blog-list__image
+                            div.recent-blog-list__details
                                 h3 #{item.title}
-                                div.recent-blog__info
+                                div.recent-blog-list__info
                                     a 
                                         img(src="./images/calendar.png")
                                         |#{item.date}
@@ -72,7 +72,7 @@ footer.footer
                 p 
                     span(style="background-image: url(./images/clock.png)")
                     |We are open 24/7
-                div.forth-section__form
+                div.footer__form
                     h2 Subscribe Us !
                     input(placeholder="Enter email address" type="email").form__email
                     button.form__button Subscribe

@@ -84,7 +84,7 @@ const genData = (currentPage, crumbTitle, crumbs = []) => {
 
 app.get('/', (req, res) => {
   res.render('pages/index', {
-    currentPage: 'Home',
+    currentPage: '',
   });
 });
 

@@ -6,9 +6,9 @@ $(document).ready(function () {
     navigation.toggleClass('active');
   });
 
-  new WOW().init(() => {
-    console.log('init');
-  });
+  const wow = new WOW({});
+
+  wow.init();
 
   $.stellar({
     horizontalOffset: 50,

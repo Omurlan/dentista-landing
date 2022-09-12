@@ -17,7 +17,7 @@ div.navigation
             h4 Menu
     ul.navigation__list#mobile-navigation
         each item in navigation 
-            if currentPage === item.title 
+            if currentPage === item.link
                 li.list__item.current
                     a(href=`./${item.link}`) #{item.title} 
             else 

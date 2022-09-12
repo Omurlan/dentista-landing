@@ -14,17 +14,17 @@ block pageVariables
 div.services
     div.container 
         div.services-content
-            div.services__introduction.wow.fadeInUp
-                h1.heading Services
-                h2.subheading Our Clinic Services 
-                p Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
-            ul.services__list
+            div.introduction.wow.fadeInUp.faster
+                h1.introduction__heading Services
+                h2.introduction__subheading Our Clinic Services 
+                p.introduction__description Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
+            ul.service-list
                 each item in servicesArr
-                    li.list__item.wow.fadeInUp
-                        div.item__tooth-round
-                            div(style='background-image: url('+ item.image +')').item__tooth-image
-                        h3 #{item.title}
-                        p #{item.desc}
+                    li.service-list__item.wow.fadeInUp.faster
+                        div.service-list_tooth-round
+                            div(style='background-image: url('+ item.image +')').service-list_tooth-image
+                        h3.service-list__title #{item.title}
+                        p.service-list__description #{item.desc}
                         
 
 

@@ -9,15 +9,15 @@ block pageVariables
 section.doctors 
     div.container
         div.doctors-content
-            div.doctors__introduction.wow.fadeInUp
-                h1.heading Doctors 
-                h3.subheading Our Qualified Doctors 
-                p Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
-            ul.doctors__list 
+            div.introduction.wow.fadeInUp
+                h1.introduction__heading Doctors 
+                h3.introduction__subheading Our Qualified Doctors 
+                p.introduction__description Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
+            ul.doctor-list 
                 each item, index in doctors 
-                    li.doctors__list-item.wow.fadeInUp(data-wow-delay=item.delay + "s")
-                        div(style='background-image: url('+ item.image +')').list-item__image
-                        h3 #{item.name}
-                        h5 #{item.title}
-                        p #{item.desc}
+                    li.doctor-list__item.wow.fadeInUp(data-wow-delay=item.delay + "s")
+                        div(style='background-image: url('+ item.image +')').doctor-list__image
+                        h3.doctor-list__name #{item.name}
+                        h5.doctor-list__title #{item.title}
+                        p.doctor-list__description #{item.desc}
             

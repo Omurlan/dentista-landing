@@ -14,10 +14,10 @@ block pageVariables
 div.treatments
     div.container 
         div.treatments-content
-            ul.treatments__list
+            ul.treatment-list
                 each item in treatments
-                    li.list__item.wow.fadeInUp
-                        div(style='background-image: url('+ item.image +')').item__treatment-image
+                    li.treatment-list__item.wow.fadeInUp
+                        div(style='background-image: url('+ item.image +')').treatment-list__image
                         h3 #{item.title}
                         p #{item.desc}
                         

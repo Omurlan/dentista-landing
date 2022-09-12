@@ -1,19 +1,19 @@
 div.consultation
-    div.consultation__left-side 
-        h3 Dental Services
-        p A small river named Duden flows by their place and supplies
-        a See services
-    div.consultation__center
-        h3 Free Consultation 
-        form.consultation__center-form
-            input(placeholder="First Name")
-            input(placeholder="Last Name")
-            select
+    div.consultation__section
+        h3.consultation__title Dental Services
+        p.consultation__description A small river named Duden flows by their place and supplies
+        a.consultation__link See services
+    div.consultation__section.consultation_dark-blue
+        h3.consultation__title Free Consultation 
+        form.consultation__form
+            input.consultation__form-control(placeholder="First Name")
+            input.consultation__form-control(placeholder="Last Name")
+            select.consultation__form-control
                   option(value="" disabled selected) Department
-            input(placeholder="Date", onfocus="(this.type='date')")
-            input(placeholder="Time" onfocus="(this.type='time')")
-            button.form__button Appointment
-    div.consultation__right-side
-        h3 Find a Doctor 
-        p A small river named Duden flows by their place and supplies
-        a Me Our Doctor
+            input.consultation__form-control(placeholder="Date", onfocus="(this.type='date')")
+            input.consultation__form-control(placeholder="Time" onfocus="(this.type='time')")
+            button.button.consultation__form-button Appointment
+    div.consultation__section
+        h3.consultation__title Find a Doctor 
+        p.consultation__description A small river named Duden flows by their place and supplies
+        a.consultation__link Me Our Doctor

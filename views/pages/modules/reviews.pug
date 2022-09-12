@@ -10,18 +10,17 @@ block pageVariables
 section.reviews 
     div.container
         div.reviews-content
-            div.reviews__introduction
-                h1.heading TESTIMONIALS
-                h3.subheading Our Patients Says About Us
-            ul.owl-carousel.owl-theme.owl-reviews.reviews__list
+            div.introduction
+                h1.introduction__heading TESTIMONIALS
+                h3.introduction__subheading Our Patients Says About Us
+            ul.reviews-list.owl-carousel.owl-theme.owl-reviews
                 each item in reviews 
-                    li.review-item
-                        div.review-top
-                            div.review-image
-                                img(src=item.image)
-                            div.review-sub
-                                p 
-                                    img(src="./images/quote.png").review-sub__qoute
-                                    |#{item.review}
-                                h5 #{item.name}
-                                h6 #{item.position}
+                    li.review-item    
+                        div.review-item__image
+                            img(src=item.image)
+                        div.review-item__info
+                            p.review-item__description
+                                img(src="./images/quote.png").review-item__qoute
+                                |#{item.review}
+                            h5.review-item__name #{item.name}
+                            h6.review-item__position #{item.position}

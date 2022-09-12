@@ -10,19 +10,19 @@ block pageVariables
 section.pricing
     div.container
         div.pricing-content
-            div.pricing__introduction.wow.fadeInUp
-                h1.heading Pricing 
-                h3.subheading Our Pricing 
-                p Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
-            div.pricing__list
+            div.introduction.wow.fadeInUp
+                h1.introduction__heading Pricing 
+                h3.introduction__subheading Our Pricing 
+                p.introduction__description Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country
+            div.pricing-list
                 each item in prices 
-                    div.pricing__list-item.wow.fadeInUp(data-wow-delay=item.delay + "s")
-                        h2 #{item.type}
-                        h4 
+                    div.pricing-list__item.wow.fadeInUp(data-wow-delay=item.delay + "s")
+                        h2.pricing-list__type #{item.type}
+                        h4.pricing-list__price
                             span $#{item.price} 
-                            |/ session
-                        ul.pricing__services-list
+                            | / session
+                        ul.pricing-services
                             each serv in item.services
-                                li.services-list__item #{serv}
-                            button.pricing__button Get Offer
+                                li.pricing-services__item #{serv}
+                            button.button.pricing__button Get Offer
 
